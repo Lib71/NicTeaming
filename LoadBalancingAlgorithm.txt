@@ -1,0 +1,21 @@
+
+To make sure the righte LoadBalancingAlgorithm is used 
+The Windows GUI is not specific at this level we have only 3 options in GUI 
+but 5 options in powershell. 
+
+Available options for the LoadBalancingAlgorithm in NIC teaming:
+
+TransportPorts (GUI as Address Hash)
+Balances traffic based on the source and destination TCP/UDP ports, along with IP addresses. This provides finer distribution of traffic, making it ideal for environments with multiple connections between two endpoints.
+
+HyperVPort (GUI)
+Balances traffic based on the virtual machine's virtual port ID. This is ideal for Hyper-V environments because it ensures that traffic from a specific virtual machine always uses the same team member.
+
+IPAddress (GUI as Address Hash)
+Balances traffic based on the source and destination IP addresses. This is a coarser distribution compared to TransportPorts but still provides a reasonable load distribution.
+
+MacAddress (GUI as Address Hash)
+Balances traffic based on the source and destination MAC addresses. This option is often less commonly used because it can lead to imbalanced traffic distribution.
+
+Dynamic (GUI)
+A combination of TransportPorts and HyperVPort, dynamically adjusts to distribute traffic efficiently. This is generally the recommended setting for most scenarios as it provides optimal load balancing across all connections and traffic types.
