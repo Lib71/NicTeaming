@@ -1,6 +1,7 @@
 
 
-The -TeamingMode parameter in NIC Teaming specifies how the physical network adapters in the team operate together. Here are the available options for the TeamingMode parameter:
+The -TeamingMode parameter in NIC Teaming specifies how the physical network adapters in the team operate together.
+Here are the available options for the TeamingMode parameter:
 
 SwitchIndependent:
 
