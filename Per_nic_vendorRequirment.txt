@@ -1,0 +1,33 @@
+
+The Vendor have specific request of the NIC settings
+
+listed : (Need to verfy the list)
+# Jumbo frame: inactive
+If the DisplayValue is set to a number around 1500 (e.g., 1514 or 1500), it means that Jumbo Frames are not enabled, as Jumbo Frames are typically much larger (e.g., 9000 or 9014 bytes).
+# Flowcontroll: RX & TX Enabel
+# Ipv4 Checksum Offload
+
+
+
+That we need to verify and also change if we need 
+
+
+Get-NetAdapterAdvancedProperty to veryfy 
+
+## exampel Get NetAdapterAdvancedProperty 
+# Get the Jumbo Frame setting for each NIC in the team
+$teamMembers = Get-NetLbfoTeamMember -Team "YourTeamName"
+
+foreach ($member in $teamMembers) {
+    Get-NetAdapterAdvancedProperty -Name $member.Name -DisplayName "Jumbo Packet"
+}
+
+## Set NetAdapterAdvancedProperty
+
+# Set the Jumbo Frame value for each NIC in the team
+$teamMembers = Get-NetLbfoTeamMember -Team "YourTeamName"
+
+foreach ($member in $teamMembers) {
+    Set-NetAdapterAdvancedProperty -Name $member.Name -DisplayName "Jumbo Packet" -RegistryValue 1514
+}
+
