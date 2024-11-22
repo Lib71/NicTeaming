@@ -1,0 +1,22 @@
+
+
+The -TeamingMode parameter in NIC Teaming specifies how the physical network adapters in the team operate together. Here are the available options for the TeamingMode parameter:
+
+SwitchIndependent:
+
+The NIC team functions independently of the network switch.
+The switch is unaware of the NIC team, and no special configuration is required on the switch.
+Suitable for most scenarios, especially when connecting to different switches or when using Hyper-V.
+
+Static:
+
+The NIC team operates in a static link aggregation mode.
+Requires manual configuration on the network switch to create a matching static team.
+Adheres to the IEEE 802.3ad standard. Suitable for environments with switches that support static teaming.
+
+LACP (Link Aggregation Control Protocol):
+
+Uses the IEEE 802.1ax standard (formerly 802.3ad) to dynamically negotiate and manage link aggregation with the switch.
+Requires switch support and configuration for LACP.
+Offers better failover and load-balancing capabilities compared to static mode.
+Ideal for environments where dynamic teaming is needed.
