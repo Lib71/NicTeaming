@@ -4,4 +4,4 @@ List all IP and if more then one per team -- Show it
 List MAC per NIC 
 Create logs before and after modification of Nic teaming and Advanced settings per NIC. 
 
-Start creating the Nicteam modifification sript , 
+Start creating the Nicteam modification sript , 
