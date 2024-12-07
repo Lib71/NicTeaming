@@ -1,0 +1,21 @@
+
+Playbook
+
+
+1 Lista de servers som ska modifieras
+2 Etablera Ilo remote console
+3. Etablera remote session windows 
+3. powershell Samla Information om befintlig status.
+    IP, MAC , Alla NIC , Befintligt Team och konfig 
+     NIC advs settings. Befintligt Vlan
+4 Synca med Nät gruppen om vilken tid som ändringen ska ske 
+5 Kör PS för att modifera teaming , till Switch independet , adress hash (mac) som setta ett kort som sandby 
+6 Nät gruppen gör sin ändrig
+7 Testa komunication , Ping , DNS mm, Geneteck tjänster mm 
+8 samla infromation hur det ser ut efter ändring.
+9 Fas 2 
+10 ändra NIC advanst settings
+11 PS ändra enligt levarntörens önskemål 
+12 Test fuktion, genetech mm. 
+
+
